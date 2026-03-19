@@ -1,0 +1,51 @@
+.bottomBar {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  background: var(--color-surface);
+  border-top: 1px solid var(--glass-border);
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.actionBtn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  color: #fff;
+}
+
+.callBtn {
+  background: var(--color-gold);
+  color: var(--color-bg);
+}
+
+.callBtn:active {
+  background: var(--color-gold-light);
+}
+
+.waBtn {
+  background: #25D366;
+}
+
+.waBtn:active {
+  background: #128C7E;
+}
+
+.icon {
+  margin-top: -2px;
+}
+
+@media (min-width: 768px) {
+  .bottomBar {
+    display: none;
+  }
+}

@@ -1,0 +1,81 @@
+.offersSection {
+  background: linear-gradient(135deg, var(--color-brown-dark), var(--color-surface));
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid var(--glass-border-gold);
+  border-bottom: 1px solid var(--glass-border-gold);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.content {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  padding: 3rem 2rem;
+  border-radius: var(--radius-xl);
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+
+.badgeWrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.badge {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--color-gold);
+  color: #000;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  font-weight: 700;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.title {
+  text-align: center;
+  color: var(--color-gold-light);
+  margin-bottom: 2.5rem;
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.listItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--color-text);
+  background: rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.ctaWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .content {
+    padding: 4rem 3rem;
+  }
+}
