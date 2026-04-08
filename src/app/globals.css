@@ -1,23 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
 
 :root {
-  --color-bg: #040d14;
-  --color-surface: #0a192f;
-  --color-surface-hover: #112240;
-  --color-brown-dark: #020c1b;
-  --color-gold: #00d2ff;
-  --color-gold-light: #64ffda;
-  --color-gold-dim: rgba(0, 210, 255, 0.15);
-  --color-text: #e6f1ff;
-  --color-text-muted: #8892b0;
-  --color-white: #ffffff;
+  --color-bg: #FFFFFF;
+  --color-surface: #F5F5F5;
+  --color-surface-hover: #EBEBEB;
+  --color-brown-dark: #1A1A1A;
+  --color-gold: #C8A96A;
+  --color-gold-light: #dfc896;
+  --color-gold-dim: rgba(200, 169, 106, 0.15);
+  --color-text: #1A1A1A;
+  --color-text-muted: #666666;
+  --color-white: #FFFFFF;
   
-  --glass-bg: rgba(10, 25, 47, 0.65);
-  --glass-border: rgba(100, 255, 218, 0.1);
-  --glass-border-gold: rgba(0, 210, 255, 0.3);
+  --glass-bg: rgba(255, 255, 255, 0.85);
+  --glass-border: rgba(26, 26, 26, 0.08); /* Dark subtle border */
+  --glass-border-gold: rgba(200, 169, 106, 0.3);
   
-  --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.5);
-  --shadow-gold: 0 4px 20px rgba(0, 210, 255, 0.25);
+  --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.06);
+  --shadow-gold: 0 4px 20px rgba(200, 169, 106, 0.25);
   
   --radius-sm: 0.5rem;
   --radius-md: 1rem;
@@ -47,7 +47,7 @@ html, body {
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
   font-weight: 600;
-  color: var(--color-white);
+  color: var(--color-text);
 }
 
 a {
@@ -119,7 +119,7 @@ button {
 
 .btn-primary {
   background: var(--color-gold);
-  color: var(--color-bg);
+  color: var(--color-white);
   box-shadow: var(--shadow-gold);
 }
 
