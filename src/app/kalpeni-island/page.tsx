@@ -48,7 +48,7 @@ export default function KalpeniIsland() {
     <>
       <Navbar />
       <main className={styles.main}>
-        <section className={styles.hero} style={{ backgroundImage: `url('https://images.unsplash.com/photo-1599059047248-cb755e14f0cb?q=80&w=2000&auto=format&fit=crop')` }}>
+        <section className={styles.hero} style={{ backgroundImage: `url('/kalpeni.png')` }}>
             <div className={styles.overlay}></div>
             <div className={`container ${styles.heroContent}`}>
                 <motion.h1 

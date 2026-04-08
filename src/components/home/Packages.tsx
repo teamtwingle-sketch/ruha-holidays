@@ -11,7 +11,7 @@ const PACKAGES = [
     duration: '5 Nights / 6 Days',
     highlights: 'Beaches, Lagoons, & Cheriyam Camp',
     price: 'Contact Us',
-    image: 'https://images.unsplash.com/photo-1599059047248-cb755e14f0cb?q=80&w=2000&auto=format&fit=crop',
+    image: '/kalpeni.png',
     link: '/kalpeni-island'
   },
   {
