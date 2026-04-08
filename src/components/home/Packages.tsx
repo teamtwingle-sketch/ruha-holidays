@@ -6,6 +6,15 @@ import styles from './Packages.module.css';
 
 const PACKAGES = [
   {
+    id: 5,
+    title: 'Kalpeni Island Package',
+    duration: '5 Nights / 6 Days',
+    highlights: 'Beaches, Lagoons, & Cheriyam Camp',
+    price: 'Contact Us',
+    image: 'https://images.unsplash.com/photo-1599059047248-cb755e14f0cb?q=80&w=2000&auto=format&fit=crop',
+    link: '/kalpeni-island'
+  },
+  {
     id: 1,
     title: 'Munnar Hill Station Package',
     duration: '3 Days / 2 Nights',
@@ -124,8 +133,8 @@ export default function Packages() {
                       <span>{PACKAGES[currentIndex].highlights}</span>
                     </div>
                   </div>
-                  <Link href="#contact" className="btn btn-outline" style={{ marginTop: '1rem', width: '100%' }}>
-                    Book Now
+                  <Link href={PACKAGES[currentIndex].link || "#contact"} className="btn btn-outline" style={{ marginTop: '1rem', width: '100%' }}>
+                    {PACKAGES[currentIndex].link ? 'View Itinerary' : 'Book Now'}
                   </Link>
                 </div>
               </motion.div>
@@ -183,8 +192,8 @@ export default function Packages() {
                     <span>{pkg.highlights}</span>
                   </div>
                 </div>
-                <Link href="#contact" className="btn btn-outline" style={{ marginTop: '1rem', width: '100%' }}>
-                  Book Now
+                <Link href={pkg.link || "#contact"} className="btn btn-outline" style={{ marginTop: '1rem', width: '100%' }}>
+                  {pkg.link ? 'View Itinerary' : 'Book Now'}
                 </Link>
               </div>
             </motion.div>

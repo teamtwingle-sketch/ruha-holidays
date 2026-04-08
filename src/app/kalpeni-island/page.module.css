@@ -1,0 +1,183 @@
+.main {
+    min-height: 100vh;
+}
+
+.hero {
+    position: relative;
+    height: 60vh;
+    min-height: 400px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.3));
+    z-index: 1;
+}
+
+.heroContent {
+    position: relative;
+    z-index: 2;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    color: var(--color-gold);
+    margin-top: 1rem;
+    font-weight: 500;
+}
+
+.contentGrid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+    padding: 3rem 0;
+}
+
+@media (max-width: 900px) {
+    .contentGrid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.note {
+    color: var(--color-text-light, gray);
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+    font-style: italic;
+}
+
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.dayCard {
+    background: var(--color-white, #fff);
+    border: 1px solid var(--color-border, #eaeaea);
+    border-radius: var(--radius-lg, 12px);
+    padding: 1.5rem;
+    box-shadow: var(--shadow-sm, 0 1px 3px rgba(0,0,0,0.1));
+}
+
+.dayHeader {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--color-border, #eaeaea);
+    padding-bottom: 1rem;
+}
+
+.dayHeader h3 {
+    font-family: var(--font-heading, inherit);
+    color: var(--color-primary, #0f172a);
+    font-size: 1.25rem;
+    margin: 0;
+}
+
+.dayBadge {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--color-primary-light, #eff6ff);
+    color: var(--color-primary, #0f172a);
+    padding: 0.4rem 0.8rem;
+    border-radius: var(--radius-full, 9999px);
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.activityList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.activityList li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+    color: var(--color-text, #333);
+    line-height: 1.6;
+}
+
+.bullet {
+    color: var(--color-gold, #cca052);
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.inclusionCard {
+    background: var(--color-primary, #0f172a);
+    color: var(--color-white, #fff);
+    padding: 2rem;
+    border-radius: var(--radius-lg, 12px);
+}
+
+.inclusionCard h3 {
+    font-family: var(--font-heading, inherit);
+    margin-bottom: 1.5rem;
+    font-size: 1.25rem;
+    color: var(--color-white, #fff);
+}
+
+.malayalamCard {
+    background: var(--color-surface, #f8fafc);
+    color: var(--color-text, #333);
+    border: 1px solid var(--color-border, #eaeaea);
+}
+
+.malayalamCard h3 {
+    color: var(--color-primary, #0f172a);
+}
+
+.checkList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.checkList li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.checkIcon {
+    color: var(--color-gold, #cca052);
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.bookCard {
+    background: var(--color-background, #fff);
+    padding: 2rem;
+    border-radius: var(--radius-lg, 12px);
+    border: 1px solid var(--color-border, #eaeaea);
+    text-align: center;
+}
+
+.bookCard h3 {
+    font-family: var(--font-heading, inherit);
+    color: var(--color-primary, #0f172a);
+    margin-bottom: 1rem;
+}
