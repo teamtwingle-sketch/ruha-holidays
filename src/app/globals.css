@@ -1,23 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
 
 :root {
-  --color-bg: #050505;
-  --color-surface: #111111;
-  --color-surface-hover: #1a1a1a;
-  --color-brown-dark: #1f1107;
-  --color-gold: #ce9d40;
-  --color-gold-light: #f5d18d;
-  --color-gold-dim: rgba(206, 157, 64, 0.15);
-  --color-text: #f0f0f0;
-  --color-text-muted: #a3a3a3;
+  --color-bg: #040d14;
+  --color-surface: #0a192f;
+  --color-surface-hover: #112240;
+  --color-brown-dark: #020c1b;
+  --color-gold: #00d2ff;
+  --color-gold-light: #64ffda;
+  --color-gold-dim: rgba(0, 210, 255, 0.15);
+  --color-text: #e6f1ff;
+  --color-text-muted: #8892b0;
   --color-white: #ffffff;
   
-  --glass-bg: rgba(17, 17, 17, 0.6);
-  --glass-border: rgba(255, 255, 255, 0.08);
-  --glass-border-gold: rgba(206, 157, 64, 0.3);
+  --glass-bg: rgba(10, 25, 47, 0.65);
+  --glass-border: rgba(100, 255, 218, 0.1);
+  --glass-border-gold: rgba(0, 210, 255, 0.3);
   
   --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.5);
-  --shadow-gold: 0 4px 20px rgba(206, 157, 64, 0.2);
+  --shadow-gold: 0 4px 20px rgba(0, 210, 255, 0.25);
   
   --radius-sm: 0.5rem;
   --radius-md: 1rem;
