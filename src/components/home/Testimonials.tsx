@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Star, ChevronLeft, ChevronRight, Quote } from 'lucide-react';
+import { Star, ChevronLeft, ChevronRight } from 'lucide-react';
 import { FaGoogle } from 'react-icons/fa';
 import styles from './Testimonials.module.css';
 
@@ -8,30 +8,38 @@ const REVIEWS = [
   {
     id: 1,
     name: 'Anjali Menon',
-    location: 'Bangalore, India',
+    initial: 'A',
+    color: '#ff5722',
+    date: '2 months ago',
     text: 'Our family trip to Munnar was organized perfectly by Ruha Holidays. The resort booking and vehicle arrangement were top-notch. Truly travel that touches the soul!',
     rating: 5
   },
   {
     id: 2,
     name: 'Rahul Sharma',
-    location: 'Delhi, India',
+    initial: 'R',
+    color: '#3f51b5',
+    date: '4 months ago',
     text: 'The houseboat experience in Alleppey was magical. The staff was courteous, and the food was amazing. Highly recommend them for Kerala tours.',
     rating: 5
   },
   {
     id: 3,
     name: 'Sneha & Arun',
-    location: 'Mumbai, India',
+    initial: 'S',
+    color: '#e91e63',
+    date: '1 week ago',
     text: 'We booked our honeymoon package with Ruha Holidays. The premium arrangements and romantic setups were exactly what we dreamed of. Thank you!',
     rating: 5
   },
   {
     id: 4,
     name: 'Dr. Ramesh Kumar',
-    location: 'Chennai, India',
+    initial: 'D',
+    color: '#009688',
+    date: '5 months ago',
     text: 'Organized a staff tour for 40 people. Seamless travel, great stay in Wayanad, and excellent coordination. Fully transparent and reliable.',
-    rating: 4
+    rating: 5
   }
 ];
 
@@ -61,8 +69,19 @@ export default function Testimonials() {
           viewport={{ once: true }}
           className={styles.header}
         >
-          <h2 className="heading-md">What Our Guests Say</h2>
-          <p className={styles.subtitle}>Real stories from our beloved travelers</p>
+          <div className={styles.googleBadge}>
+            <FaGoogle size={32} color="#4285F4" className={styles.headerGoogleIcon} />
+            <div className={styles.googleStats}>
+              <span className={styles.googleRatingText}>Excellent</span>
+              <div className={styles.googleStars}>
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} size={20} fill="#FBBC05" color="#FBBC05" strokeWidth={0} />
+                ))}
+              </div>
+              <span className={styles.ratingSubtext}>Based on exceptional reviews</span>
+            </div>
+          </div>
+          <h2 className="heading-md" style={{ marginTop: '2rem' }}>What Our Guests Say</h2>
         </motion.div>
 
         <div className={styles.carouselWrapper}>
@@ -92,25 +111,30 @@ export default function Testimonials() {
                   }
                 }}
               >
-                <Quote size={40} className={styles.quoteIcon} />
-                
-                <div className={styles.stars}>
+                <div className={styles.cardHeader}>
+                  <div className={styles.avatar} style={{ backgroundColor: REVIEWS[currentIndex].color }}>
+                    {REVIEWS[currentIndex].initial}
+                  </div>
+                  <div className={styles.authorInfo}>
+                    <h4 className={styles.authorName}>{REVIEWS[currentIndex].name}</h4>
+                    <span className={styles.reviewDate}>{REVIEWS[currentIndex].date}</span>
+                  </div>
+                  <FaGoogle size={24} color="#4285F4" className={styles.googleIconCard} />
+                </div>
+
+                <div className={styles.starsRow}>
                   {[...Array(5)].map((_, i) => (
                     <Star
                       key={i}
-                      size={20}
-                      fill={i < REVIEWS[currentIndex].rating ? 'var(--color-gold)' : 'transparent'}
-                      color="var(--color-gold)"
+                      size={18}
+                      fill={i < REVIEWS[currentIndex].rating ? '#FBBC05' : 'transparent'}
+                      color="#FBBC05"
+                      strokeWidth={0}
                     />
                   ))}
                 </div>
 
                 <p className={styles.reviewText}>"{REVIEWS[currentIndex].text}"</p>
-                
-                <div className={styles.authorInfo}>
-                  <h4 className={styles.authorName}>{REVIEWS[currentIndex].name}</h4>
-                  <span className={styles.authorLocation}>{REVIEWS[currentIndex].location}</span>
-                </div>
               </motion.div>
             </AnimatePresence>
           </div>
@@ -144,7 +168,7 @@ export default function Testimonials() {
             rel="noreferrer"
             className="btn btn-outline"
           >
-            <FaGoogle size={18} style={{ marginRight: '0.5rem' }} />
+            <FaGoogle size={18} style={{ marginRight: '0.6rem', color: '#4285F4' }} />
             Write a Review on Google
           </a>
         </motion.div>
