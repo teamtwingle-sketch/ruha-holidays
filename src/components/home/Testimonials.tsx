@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Star, ChevronLeft, ChevronRight, Quote } from 'lucide-react';
+import { FaGoogle } from 'react-icons/fa';
 import styles from './Testimonials.module.css';
 
 const REVIEWS = [
@@ -129,6 +130,24 @@ export default function Testimonials() {
             />
           ))}
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.4 }}
+          className={styles.reviewCta}
+        >
+          <a
+            href="https://g.page/r/CY5tL8EqZ6WWEBM/review"
+            target="_blank"
+            rel="noreferrer"
+            className="btn btn-outline"
+          >
+            <FaGoogle size={18} style={{ marginRight: '0.5rem' }} />
+            Write a Review on Google
+          </a>
+        </motion.div>
       </div>
     </section>
   );

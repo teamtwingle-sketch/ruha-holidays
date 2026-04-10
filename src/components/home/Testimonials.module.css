@@ -136,6 +136,13 @@
   transform: scale(1.2);
 }
 
+.reviewCta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4rem;
+}
+
 @media (min-width: 768px) {
   .navBtn {
     width: 3.5rem;
